@@ -14,14 +14,34 @@
 		ga('send', 'pageview');
 	</script>
     
-    <title>Manifesto - Creative Portfolio Template</title>
+    <title>Purple Grail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2023" />
+    <meta name="description" content="Your Content, Design & Development Partners"/>
     <meta name="author" content="ClaPat Studio">
     <meta charset="UTF-8" />    
-    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/ico" sizes="32x32" href="./purple-favicon-32x32.ico" />
+    <link rel="icon" type="image/ico" sizes="16x16" href="./purple-favicon-16x16.ico" />
     <link href="style.css" rel="stylesheet" />
+
+    <style>
+        .map {
+            width: 100%; /* Full-width map */
+            height: 35rem; /* Fixed height */
+            border: 1px solid #ddd; /* Optional styling */
+            border-radius: 8px; /* Optional rounded corners */
+            z-index: 0;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .map {
+                height: 30rem; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+
     <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
    
 </head>
@@ -43,7 +63,7 @@
                         <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
                     </div>
                     
-                    <div class="percentage-intro">Please wait, content is loading</div>                     
+                    <div class="percentage-intro">Please wait, awesomeness is loading</div>                     
                 </div>
             </div>
         </div>
@@ -61,7 +81,7 @@
                 
                 <!-- Logo -->
                 <div id="logo" class="hide-ball">
-                    <a class="ajax-link" data-type="page-transition" href="index-2.html">
+                    <a class="ajax-link" data-type="page-transition" href="index.html">
                         <img class="black-logo" src="images/logo.png" alt="ClaPat Logo">
                         <img class="white-logo" src="images/logo-white.png" alt="ClaPat Logo">
                     </a>
@@ -75,26 +95,10 @@
                         <div class="outer">
                             <div class="inner">           
                                 <ul data-breakpoint="10025" class="flexnav">
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="index-2.html"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="Portfolio">Portfolio</span></div></a>
-                                        <ul>
-                                            <li><a class="ajax-link" href="index-showcase-carousel.html" data-type="page-transition">Showcase Carousel</a></li>
-                                            <li><a class="ajax-link" href="index-showcase-grid.html" data-type="page-transition">Portfolio Grid</a></li>
-                                            <li><a class="ajax-link" href="index-showcase-slider.html" data-type="page-transition">Fullscreen Slider</a></li>
-                                            <li><a class="ajax-link" href="index-showcase-list.html" data-type="page-transition">Infinity List</a></li>
-                                            <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
-                                        </ul>
-                                    </li>
+                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="index.html"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="" href="index-showcase-slider.html"><div class="before-span"><span data-hover="Portfolio">Services</span></div></a></li>
                                     <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="About">About</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="ajax-link active" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="More">More</span></div></a>
-                                        <ul>
-                                            <li><a class="ajax-link" href="typography.html" data-type="page-transition">Typography</a></li>                                         
-                                            <li><a class="ajax-link" href="multimedia.html" data-type="page-transition">Multimedia</a></li>
-                                            <li><a class="ajax-link" href="shortcodes.html" data-type="page-transition">Shortcodes</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="link menu-timeline"><a class="buy-template" target="_blank" href="https://themeforest.net/item/manifesto-creative-portfolio-theme/48149521"><div class="before-span"><span data-hover="Buy Now">Buy Now</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Contact</span></div></a></li>
                                 </ul>            
                             </div>
                         </div> 
@@ -172,17 +176,6 @@
                                         <div class="message-box">
                                             <textarea name="comments" cols="40" rows="4" id="comments" placeholder="Tell Us About Your Project" ></textarea><label class="input_label slow"></label>
                                         </div>
-                                        
-                                        <div class="verify-box">                                        
-                                            <ul class="verify-sum">
-                                                <li>1</li>
-                                                <li>+</li>
-                                                <li>3</li>
-                                                <li>=</li>
-                                            </ul>
-                                            <input name="verify" type="text" id="verify" size="4" value=""/>
-                                            <p class="required"><span>*</span> Captcha Validation</p>
-                                        </div>
                                                                      
                                         <div class="button-box">             
                                             <div class="clapat-button-wrap parallax-wrap link">
@@ -200,11 +193,7 @@
                             
                             
                             <!-- Row -->
-                            <div class="content-row full dark-section has-clip-path" data-bgcolor="#333">
-                                
-                                <div id="map_canvas"></div>
-                                
-                            </div> 
+                            <div id="mapContainer" class="map"></div>
                             <!--/Row -->
                             
                             
@@ -221,15 +210,13 @@
                                 
                                 <div class="one_half last">
                                 	<p class="no-margins bigger">Mail Support</p>
-                                    <p class="bigger"><a href="mailto:office@manifesto.com" class="link"><span class="has-mask-fill">office@manifesto.com</span></a></p>
+                                    <p class="bigger"><a href="mailto:purplegrailservices@gmail.com" class="link"><span class="has-mask-fill">purplegrailservices@gmail.com</span></a></p>
                                     
                                     <hr><hr>
                                     <p class="no-margins bigger">We are social</p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.facebook.com/clapat.ro" target="_blank"><span class="has-mask-fill">Facebook</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.dribbble.com/clapat" target="_blank"><span class="has-mask-fill">Dribbble</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.instagram.com/clapat.themes/"><span class="has-mask-fill">Instagram</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.twitter.com/clapatdesign" target="_blank"><span class="has-mask-fill">Twitter</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.behance.com/clapat" target="_blank"><span class="has-mask-fill">Behance</span></a></p> 
+                                    <p class="no-margins bigger"><a class="link" href="https://www.facebook.com/purplegrail" target="_blank"><span class="has-mask-fill">Facebook</span></a></p>
+                                    <p class="no-margins bigger"><a class="link" href="https://www.instagram.com/purple._.grail/"><span class="has-mask-fill">Instagram</span></a></p>
+                                    <p class="no-margins bigger"><a class="link" href="https://x.com/PurpleGrail" target="_blank"><span class="has-mask-fill">Twitter</span></a></p> 
                                     
                                     <hr><hr>
                                     <p class="no-margins bigger">Give us a call</p>
@@ -245,7 +232,7 @@
                             <!-- Row -->
                             <div class="content-row full dark-section text-align-center" data-bgcolor="#0c0c0c">
                                 
-                                <h2 class="big-title link"><em>004</em> (0742) 016 572</h2>
+                                <h2 class="big-title link"><em>+91</em> 9773774090</h2>
                                 
                             </div> 
                             <!--/Row -->
@@ -258,9 +245,9 @@
                                 <div class="one_half"></div>
                                 
                                 <div class="one_half last">
-                                	<p class="no-margins bigger">Are we in your area?</p>
-                                    <p class="no-margins bigger has-mask-fill">820 Porto Street, San Francisco</p>
-                                    <p class="no-margins bigger has-mask-fill">CA, 941230</p>
+                                	<p class="no-margins bigger">Where we are right now?</p>
+                                    <p class="no-margins bigger has-mask-fill">Dwarka, New Delhi</p>
+                                    <p class="no-margins bigger has-mask-fill">India - 110078</p>
                                     
                                     <hr>                                  
                                     
@@ -294,18 +281,16 @@
                         </div>
                         
                         <div class="footer-middle">
-                            <div class="copyright">2023 © <a class="link" target="_blank" href="https://www.clapat.com/">ClaPat</a>. All rights reserved.</div>
+                            <div class="copyright">2025 © <a class="link" target="_blank" href="https://www.purplegrail.in/">Purple Grail</a>. All rights reserved.</div>
                         </div>
                         
                         <div class="socials-wrap">            	
                             <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
                             <div class="socials-text">Follow Us</div>
                             <ul class="socials">
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tw</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.behance.com/clapat" target="_blank">Be</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/clapat.ro" target="_blank">Fb</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/clapat.themes/">In</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://x.com/PurpleGrail" target="_blank">Tw</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/purplegrail" target="_blank">Fb</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/purple._.grail/">In</a></span></li>
                             </ul>                
                         </div>
                         
@@ -361,7 +346,40 @@
     <script src="js/contact.js"></script>
     <script src="js/scripts.js"></script>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mapContainer = document.getElementById("mapContainer");
 
+            const location = { lat: 28.608634569191043, lng: 77.0157744678717 }; // Location Coordinates
+            const zoomLevel = 12;
+            let map; // Variable to store the map instance
+
+            function initializeMap() {
+                if (!map) {
+                    map = L.map(mapContainer, {
+                        center: [location.lat, location.lng],
+                        zoom: zoomLevel,
+                        scrollWheelZoom: false,
+                    });
+
+                    // Add OpenStreetMap tiles
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors',
+                    }).addTo(map);
+
+                    // Add a marker
+                    L.marker([location.lat, location.lng])
+                        .addTo(map)
+                        .bindPopup('We are Here!')
+                        .openPopup();
+                }
+            }
+
+            // Initialize the map
+            initializeMap();
+        });
+    </script>
 
 </body>
 

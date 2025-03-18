@@ -1,0 +1,14 @@
+.map {
+    width: 100%; /* Full-width map */
+    height: 35rem; /* Fixed height */
+    border: 1px solid #ddd; /* Optional styling */
+    border-radius: 8px; /* Optional rounded corners */
+    z-index: 0;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .map {
+      height: 30rem; /* Adjust height for smaller screens */
+    }
+  }
