@@ -3498,7 +3498,7 @@ Function Core
 				  
 				  	$('main').html(section);
 				  
-				 	var clapat_title = event.match(/<title[^>]*>([^<]+)<\/title>/)[1];
+				 	var clapat_title = event?.match(/<title[^>]*>([^<]+)<\/title>/)[1];
 					$('head title').html( clapat_title );
 				  
 					// if we have Elementor inline styles in the target page
