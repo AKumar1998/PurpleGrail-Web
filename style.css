@@ -1,10 +1,4 @@
-/*------------------------------------------------------------------
-Project:	Serano - Creative Portfolio Template
-Version:	1.0
-Last change:	15/08/2022
-Assigned to:	www.ClaPat.com 
-Primary use:	Showcase Portfolio 
--------------------------------------------------------------------*/
+
 
 @import url("css/content.css");
 @import url("css/showcase.css");
@@ -1416,21 +1410,22 @@ Primary use:	Showcase Portfolio
 	}
 	
 	@keyframes rotating {
-      0% {
-		-webkit-transform: translate(-14px, -14px)rotate(0deg);
-		transform:  translate(-14px, -14px)) rotate(0deg);
-      }
+		0% {
+		  -webkit-transform: translate(-14px, -14px) rotate(0deg);
+		  transform: translate(-14px, -14px) rotate(0deg);
+		}
 	  
-	  95% {
-        -webkit-transform:  translate(-14px, -14px) rotate(350deg);
-		transform:  translate(-14px, -14px) rotate(350deg);
-      }
+		95% {
+		  -webkit-transform: translate(-14px, -14px) rotate(350deg);
+		  transform: translate(-14px, -14px) rotate(350deg);
+		}
 	  
-      100% {
-        -webkit-transform:  translate(-14px, -14px) rotate(360deg);
-		transform:  translate(-14px, -14px) rotate(360deg);
-      }
-	}
+		100% {
+		  -webkit-transform: translate(-14px, -14px) rotate(360deg);
+		  transform: translate(-14px, -14px) rotate(360deg);
+		}
+	  }
+	  
 	
 	.show-loader a, .show-loader nav, .scale-up a, .scale-up .hide-ball, scale-up .link, .scale-up .button-wrap, .scale-up #burger-wrapper, .scale-up .disable-drag, .scale-drag a, .scale-drag .move-title {
 		pointer-events:none!important;
