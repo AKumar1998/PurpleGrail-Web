@@ -3509,7 +3509,7 @@ Function Core
 								'link[id*="google-fonts"]',
 							];
 					var head = document.head;
-					var newPageRawHead = event.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0];
+					var newPageRawHead = event?.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0];
 					newPageHead = document.createElement('head');
 					
 					newPageHead.innerHTML = newPageRawHead;

@@ -182,11 +182,6 @@
                             
                             
                             <!-- Row -->
-                            <div id="mapContainer" class="map"></div>
-                            <!--/Row -->
-                            
-                            
-                            <!-- Row -->
                             <div class="content-row small row_padding_top dark-section" data-bgcolor="#0c0c0c">
                                 
                                 <div class="one_half">                                
@@ -208,7 +203,7 @@
                                     <p class="no-margins bigger"><a class="link" href="https://x.com/PurpleGrail" target="_blank"><span class="has-mask-fill">Twitter</span></a></p> 
                                     
                                     <hr><hr>
-                                    <p class="no-margins bigger">Give us a call</p>
+                                    <p class="no-margins bigger">Send us a Text/Call</p>
                                     
                                     <hr>                                  
                                     
@@ -321,7 +316,7 @@
     
     
 		
-    <script src="./js/jquery.min.js"></script>       
+    <script src="./js/jquery.min.js" allow="cross-origin-isolated"></script>       
     <script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 	<script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>    
@@ -335,34 +330,6 @@
     <script src="./js/common.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/scripts.js"></script>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-    function initializeMap() {
-        let mapContainer = document.getElementById("mapContainer");
-
-        // Ensure that Leaflet does not reinitialize a previously created map instance
-        if (mapContainer && mapContainer.innerHTML.trim() !== "") {
-            mapContainer.innerHTML = ""; // Clear previous instance before reloading
-        }
-
-        let map = L.map("mapContainer").setView([28.6139, 77.2090], 12); // Example: New Delhi coordinates
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-    }
-
-    // Run when the page is loaded or revisited
-    document.addEventListener("DOMContentLoaded", initializeMap);
-
-    // Ensure the map is reloaded when navigating back
-    document.addEventListener("visibilitychange", function () {
-        if (!document.hidden) {
-            initializeMap();
-        }
-    });
-</script>
-
 
 </body>
 
