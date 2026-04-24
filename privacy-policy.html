@@ -11,12 +11,10 @@
     <link rel="icon" type="image/ico" sizes="32x32" href="./purple-favicon-32x32.ico" />
     <link rel="icon" type="image/ico" sizes="16x16" href="./purple-favicon-16x16.ico" />
     <link href="./style.css" rel="stylesheet" />
-
     <link href="./css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
    
-</head>
+</head>    
 
 
 <body class="hidden hidden-ball smooth-scroll uppercase-titles" data-primary-color="#8c6144">
@@ -35,7 +33,7 @@
                         <div class="percentage-wrapper"><div class="percentage" id="precent"></div></div>
                     </div>
                     
-                    <div class="percentage-intro">Please wait, awesomeness is loading</div>                     
+                    <div class="percentage-intro">Please wait, awesomeness is loading</div>                    
                 </div>
             </div>
         </div>
@@ -44,7 +42,7 @@
         <div class="cd-index cd-main-content">
     
         <!-- Page Content -->
-        <div id="page-content" class="light-content" data-bgcolor="#0c0c0c">
+        <div id="page-content" class="dark-content" data-bgcolor="#f9f9f9">
             
             <!-- Header -->
             <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
@@ -77,8 +75,8 @@
                     </div>          
                 </nav>
                 <!--/Navigation -->
-                
-                
+              
+              
                 <!-- Menu Burger -->
                 <div class="button-wrap right menu burger-lines">
                     <div class="icon-wrap parallax-wrap">
@@ -98,8 +96,10 @@
             
                 </div>
             </header>
-            <!--/Header -->
+            <!--/Header -->        
             
+            
+             
             
             
             <!-- Content Scroll -->
@@ -110,133 +110,153 @@
                 <div id="main">
                 
                     <!-- Hero Section -->
-                    <div id="hero">
+                    <div id="hero" class="has-image autoscroll">
                         <div id="hero-styles">
-                            <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center">
-                                <div class="inner">                                    
-                                    <h1 class="hero-title caption-timeline"><span><em>Let's create</em></span> <span>something great</span> <span>together</span></h1>
-                                    <div class="hero-subtitle caption-timeline"><span>Contact us and let's bring your vision to life</span></div>                 
+                            <div id="hero-caption" class="content-full-width text-align-center parallax-scroll-caption">
+                                <div class="inner">   
+                                    <h1 class="hero-title caption-timeline primary-font-title"><span><em>Privacy</em> Policy</span></h1>
+                                    <div class="hero-arrow link caption-timeline"><span><i class="arrow-icon"></span></i></div>
                                 </div>
-                            </div>                                  
+                            </div>
+                                                               
                         </div>
-                    </div>                      
-                    <!--/Hero Section -->   
+                    </div>
+                    <div id="hero-image-wrapper">
+                    	<div id="hero-background-layer" class="parallax-scroll-image">
+                            <div id="hero-bg-image" style="background-image:url(images/pp-image.png)">
+                            	<!-- <div class="hero-video-wrapper">
+                                    <video loop muted playsinline class="bgvid">
+                                        <source src="./images/app-dev-hero.gif" type="video/mp4">
+                                    </video>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>                        
+                    <!--/Hero Section -->    
                          
                     
                     <!-- Main Content -->
                     <div id="main-content">
-                        <!-- Main Page Content -->
-                        <div id="main-page-content" class="content-max-width">
-                            
-                            
-                            <!-- Row -->
-                            <div class="content-row row_padding_bottom dark-section text-align-center" data-bgcolor="#0c0c0c">
-                                 
+                        <div id="main-page-content">
+                        
+                        
+                        	<!-- Row -->
+                            <div class="content-row small row_padding_top row_padding_bottom dark-section change-header-color" data-bgcolor="#171717">
                                 
-                                <!-- Contact Formular -->
-                                <div id="contact-formular">
-                                
-                                    <div id="message"></div>
-                                
-                                    <form method="post" action="./contact_email_service.php" name="contactform" id="contactform">                             
-                                        <div class="name-box">        
-                                            <input name="name" type="text" id="name" size="30" value="" placeholder="What's Your Name"><label class="input_label"></label>
-                                        </div>                                                        
-                                        <div class="email-box">
-                                            <input name="email" type="text" id="email" size="30" value="" placeholder="Your Email"><label class="input_label"></label>
-                                        </div>                            
-                                        <div class="message-box">
-                                            <textarea name="comments" cols="40" rows="4" id="comments" placeholder="How can we help you?" ></textarea><label class="input_label slow"></label>
-                                        </div>
-                                                                     
-                                        <div class="button-box">             
-                                            <div class="clapat-button-wrap parallax-wrap link">
-                                                <div class="clapat-button parallax-element">
-                                                    <div class="button-border rounded outline "><input type="submit" class="send_message" id="submit" value="Send Message" /></div>
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </form>                        
-                                                            
-                                </div>
-                                <!--/Contact Formular -->
-                            </div> 
-                            <!--/Row -->
-                            
-                            
-                            <!-- Row -->
-                            <div class="content-row small row_padding_top dark-section" data-bgcolor="#0c0c0c">
-                                
-                                <div class="one_half">                                
-                                	<h5>for any enquires or just to say hello get in touch with us</h5>
-                                </div>
-                                
-                                <div class="one_half last"></div>
-                                
-                                <div class="one_half"></div>
-                                
-                                <div class="one_half last">
-                                	<p class="no-margins bigger">Mail Support</p>
-                                    <p class="bigger"><a href="mailto:purplegrailservices@gmail.com" class="link"><span class="has-mask-fill">purplegrailservices@gmail.com</span></a></p>
-                                    
-                                    <hr><hr>
-                                    <p class="no-margins bigger">We are social</p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.facebook.com/purplegrail" target="_blank"><span class="has-mask-fill">Facebook</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://www.instagram.com/purple._.grail/"><span class="has-mask-fill">Instagram</span></a></p>
-                                    <p class="no-margins bigger"><a class="link" href="https://x.com/PurpleGrail" target="_blank"><span class="has-mask-fill">Twitter</span></a></p> 
-                                    
-                                    <hr><hr>
-                                    <p class="no-margins bigger">Send us a Text/Call</p>
-                                    
-                                    <hr>                                  
-                                    
-                                </div>
-                                
-                            </div> 
-                            <!--/Row -->
-                            
-                            
-                            <!-- Row -->
-                            <div class="content-row full dark-section text-align-center" data-bgcolor="#0c0c0c">
-                                
-                                <h2 class="big-title link"><em>+91</em> 9773774090</h2>
-                                <h2 class="big-title link"><em>+91</em> 8860280503</h2>
-                                
-                            </div> 
-                            <!--/Row -->
-                            
-                            <!-- Row -->
-                            <div class="content-row small row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
+                                <h3 class="has-mask-fill no-margins secondary-font-title">PRIVACY POLICY  </h3>
+                                <h3 class="has-mask-fill">PURPLE GRAIL </h3>
                                 
                                 <hr>
                                 
-                                <div class="one_half"></div>
+                                <div class="one_third">
+                                	<p class="has-mask-fill no-margins">&nbsp</p>
+                                    <p class="has-mask-fill no-margins">&nbsp</p>
+                                    <p class="has-mask-fill no-margins">&nbsp</p>
+                                </div>
                                 
-                                <div class="one_half last">
-                                	<p class="no-margins bigger">Where we are right now?</p>
-                                    <p class="no-margins bigger has-mask-fill">Dwarka, New Delhi</p>
-                                    <p class="no-margins bigger has-mask-fill">India - 110078</p>
-                                    <p class="no-margins bigger has-mask-fill">&</p>
-                                    <p class="no-margins bigger has-mask-fill">Colchester, England</p>
-                                    <p class="no-margins bigger has-mask-fill">United Kingdom</p>
-                                    
-                                    <hr>                                  
-                                    
+                                <div class="two_third last">
+                                	<p class="has-opacity">1. INTRODUCTION
+Welcome to Purple Grail. We are a branding and digital consultancy based in Delhi,
+India. We provide services including website development, design, hosting, graphic
+design, content writing, social media strategy, and logo design.
+This Privacy Policy explains how we collect, use, and protect your personal data in
+compliance with the Digital Personal Data Protection (DPDP) Act, 2023, and the
+2025 Rules. This policy applies to our clients, website visitors, and individuals whose
+data we process as part of our professional services.</p>
+
+                                    <p class="has-opacity">2. DATA WE COLLECT AND THE PURPOSE
+We only collect personal data that is necessary for the specified purposes of our
+business relationship.
+<ul>
+<li>Identity and Contact Data: Includes names, email addresses, phone
+numbers, and job titles. We use this to communicate with you regarding
+project milestones, invoicing, and service updates.</li>
+<li>Technical and Usage Data: Includes IP addresses, browser types, and
+device information collected via our website and hosting servers. We use this
+to ensure the security of hosted websites and to optimize user experience.</li>
+<li>Business and Branding Data: Includes brand assets, social media handles,
+and marketing information. We use this to execute your branding, content,
+and social media strategies.</li>
+<li>Financial Data: Includes GSTIN and billing details. We use this for legal tax
+compliance and processing payments under Indian law.</li>
+</ul>
+</p>
+
+                                        <p class="has-opacity">3. CONSENT AND YOUR RIGHTS
+By engaging our services, you provide consent for the processing of your data for
+the purposes listed above. Under the DPDP Act, you have the following rights:
+<ul>
+<li>Right to Access: You may request a summary of the personal data we hold
+about you.</li>
+<li>Right to Correction/Erasure: You may ask us to update inaccurate data or
+delete your data once the purpose of collection has been fulfilled.</li>
+</ul>
+
+<ul>
+<li>Right to Withdraw: You may withdraw your consent at any time. Withdrawal
+of consent will not affect the legality of processing carried out prior to the
+withdrawal.</li>
+<li>Right to Grievance Redressal: You have the right to lodge a complaint
+regarding data processing (see Section 7).</li>
+</ul>
+</p>
+
+                                            <p class="has-opacity">4. DATA SHARING AND THIRD PARTIES
+We do not sell your personal data. We only share data with third-party service
+providers (Data Processors) when essential for service delivery, such as:
+<ul>
+<li>Web Hosting Providers: To store and serve your website files.</li>
+<li>Email and Communication Tools: To manage project workflows.</li>
+<li>Advertising Platforms: To manage social media ad campaigns on your
+behalf. All third-party partners are vetted to ensure they maintain reasonable
+security safeguards as required by Indian law.</li>
+</ul>
+</p>
+
+                                                <p class="has-opacity">5. DATA SECURITY AND STORAGE
+We implement industry-standard security measures, including encryption and access
+controls, to protect your data. While we may use global cloud infrastructure for
+efficiency, we prioritize data residency within India for sensitive project data where
+required by law or client preference. We retain your data only for as long as
+necessary to fulfil our service obligations and legal requirements.</p>
+
+                                                <p class="has-opacity">6. CHILDREN’S PRIVACY
+Our services are primarily directed at business entities. We do not knowingly collect
+or process data from individuals under the age of 18 without verifiable parental
+consent. If we become aware that we have inadvertently collected such data, we will
+take steps to delete it immediately.</p>
+
+                                                <p class="has-opacity">7. GRIEVANCE REDRESSAL OFFICER
+In compliance with the DPDP Act, we have appointed a Grievance Officer to address
+any concerns you may have regarding your privacy.
+<ul>
+    <li>Name: Ajay Kumar</li>
+    <li>Email: ak.purplegrail@gmail.com</li>
+</ul>
+
+We will acknowledge your grievance within 72 hours and aim to resolve all queries
+within 30 days. If you are not satisfied with our response, you may escalate your
+concern to the Data Protection Board of India (DPB).</p>
+
+                                                <p class="has-opacity">8. UPDATES TO THIS POLICY
+We may update this policy from time to time to reflect changes in our practices or
+legal obligations. The &quot;Effective Date&quot; at the top will indicate when the latest changes
+were made.</p>
                                 </div>
                                 
                             </div> 
                             <!--/Row -->
                             
                         
-                        </div>
-                        <!--/Main Page Content -->
                         
+                        </div>
+                        <!--/Main Page Content -->                                               
                                 
                     </div>
                     <!--/Main Content --> 
-                
                 </div>
-                <!--/Main -->
+                <!--/Main --> 
+                
                 
                  <!-- Footer -->
                 <footer class="hidden">        	
@@ -260,7 +280,7 @@
                             <div class="socials-text">Additional Links</div>
                             <ul class="socials">
                                 <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/purple._.grail/">Insta</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="./privacy-policy.html">Privacy</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/purple._.grail/">Privacy</a></span></li>
                             </ul>                
                         </div>
                         
@@ -272,9 +292,7 @@
         	</div>
             <!--/Content Scroll -->
             
-            
             <div id="app"></div>
-            
             
 		</div>    
         <!--/Page Content -->
@@ -284,8 +302,7 @@
     
     
     
-    
-    <div class="cd-cover-layer"></div>
+   <div class="cd-cover-layer"></div>
     <div id="magic-cursor">
         <div id="ball">
         	<div id="ball-drag-x"></div>
@@ -300,20 +317,22 @@
     
     
 		
-    <script src="./js/jquery.min.js" allow="cross-origin-isolated"></script>       
+    <script src="./js/jquery.min.js"></script>       
     <script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 	<script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="./cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>    
     <script src='./cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'></script>
 	<script src='./cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js'></script>
-	<script src='./cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js'></script>
-    
+    <script src='./cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js'></script>
+	
     <script src="./js/clapat.js"></script>
 	<script src="./js/plugins.js"></script>
     
     <script src="./js/common.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/scripts.js"></script>
+
+
 
 </body>
 
